@@ -1,37 +1,62 @@
-## Welcome to GitHub Pages
+**ATTENTION**
+This is a project in ALPHA State, that cannot be compiled or used in any way. See the Wiki for project documentation information
 
-You can use the [editor on GitHub](https://github.com/Human3-11BetaRelease/Paperless_Office/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+# Projekt Dokumenten-Digitalisierung und -Organisation
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+**Gesamtziel** ist eine verbesserte Ordnung und vereinfachte Digitalisierung.
 
-```markdown
-Syntax highlighted code block
+- Hashtag-basierte Ablage, um Dokumente vielen Projekten zuordnen zu können
+    - Kommandozeilentool mit Hashtag-Zuordnung im Explorer
+    - Suchtool, um Dateien mit bestimmte HashTag ausfindig zu machen
+- Dokumente einfach mit dem Smartphone digitaliseren
+    - SmartphoneApp zum:
+        - Foto-Machen
+        - Hastag-Zuordnen
+        - Hochladen ins System
+    - Digitalisierungsbox:
+        - Smartphone-Auflage zum Scannen von DIN-A4-Dateien
+        - Ausleuchtung der Box zur Qualitätssteigerung
+        - Box sollte Reisefähig sein
+        - Dokumente sollten "geglättet" werden können
 
-# Header 1
-## Header 2
-### Header 3
+## Teilprojekt HashTag-Basierte Dateiablage
 
-- Bulleted
-- List
+Dateien und Dokumente sind häufig mehreren Punkten zuzuordnen (z.B. beiden Seiten einer Schnittstelle). Über die HashTag-Verwaltung soll die Zuordnung zu beliebig vielen Aspekten möglich werden und die Dokumente immer auffindbar sein. Das soll auf Ordner-Ebene oder bis auf DateiEbene funktionieren (Ordner mehreren Projekten zuordnen oder einzelne Dateien mehreren Projekten zuordnen)
 
-1. Numbered
-2. List
+### Anforderungen
 
-**Bold** and _Italic_ and `Code` text
+- Dokumente im normalen Dateisystem abgelegt
+- Bedienung über ContextMenu des Explorers
+- Suchfunktion mit Auflistung von Dateien
+- Beim Verschieben von Dateien darf keine Tagging-Information verloren gehen, bzw. sie sollte mitwandern
 
-[Link](url) and ![Image](src)
-```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Human3-11BetaRelease/Paperless_Office/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+## Teilprojekt Smartphone-as-a-Scanner
 
-### Support or Contact
+### DigitalisierungsApp für Android
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Ziel ist eine App mit "FotoStudioBox", um Dokumente maximal einfach einzuscannen und der Hashtagbasierten Dateiablage zuzuordnen.
+
+### Fotostudiobox
+
+Die Fotostudiobox soll die Dokumente ideal ausleuchten und das Smartphone so positionieren können, dass genau ein Foto des DIN A4 Blattes erstellt wird.
+
+## Teilprojekt Automatische Inhaltserkennung
+
+Ziel ist ein DockerContainer, der die Scans erhält (z.B. per EMail), Texterkennung darüber laufen lässt und den erkannten Text durchsuchbar zusammen mit dem Original weiterleitet, sodass sie in die Hashtagbasierte Ablage eingefügt werden. (z.B. über einen Ordner je Scan mit den durchsuchbaren Texten)
+
+## Teilprojekt Smartphone-as-a-Diktiergerät
+
+Ziel ist eine App, um unterwegs möglichst einfach Sprachmemos aufzunehmen, die hochgeladen, per Spracherkennung umgewandelt und dann Hashtagbasiert abgelegt werden.
+
+## Teilprojekt Versionsverwaltung und Synchronisierung
+
+Sämtliche Dokumente sollen in einer Versionsverwaltung hinterlegt werden.
+
+Ein Script soll den Laptop automatisch mit dem Serverstatus abgleichen.
+
+Hier wird wohl auf ein StandardTool zurückgegriffen
